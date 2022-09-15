@@ -46,6 +46,6 @@ public class Transport {
     }
 
     public float getPrice(City city){
-        return city.getDistanceKm() * costOfKm;
+        return city.getDistanceKm() * getCostOfKm();
     }
 }
