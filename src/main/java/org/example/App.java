@@ -6,30 +6,24 @@ public class App
 {
     public static void main( String[] args )
     {
-        City City1 = new City();
-        City City2 = new City();
-        City1.name = "Сургут";
-        City1.distanceKm = 1000;
-        City2.name = "Москва";
-        City2.distanceKm = 2000;
+        City City1 = new City("Сургут",1000);
+        City City2 = new City("Москва",2000);
 
-        System.out.println(City1.name + " " + City1.distanceKm);
-        System.out.println(City2.name + " " + City2.distanceKm);
+        System.out.println("Расстояние до города " + City1.getName() + " " + City1.getDistanceKm() + " км");
+        System.out.println("Расстояние до города " + City2.getName() + " " + City2.getDistanceKm() + " км");
 
-        Transport Trasnport1 = new Transport();
-        Transport Trasnport2 = new Transport();
-        Trasnport1.name = "Автомобиль Аudi 100";
-        Trasnport1.speed = 200;
-        Trasnport1.costOfKm = 1.20F;
+        Transport Trasnport1 = new Transport("Автомобиль Аudi 100", 300,250,1.20f);
+        Transport Trasnport2 = new Transport("Микроавтобус Mercedes Спринтер",1000,200,2.5f);
 
-        Trasnport2.name = "Микроавтобус Mercedes Спринтер";
-        Trasnport2.speed = 180;
-        Trasnport2.costOfKm = 2.20F;
 
-        System.out.println(Trasnport1.name + " скорость:" + Trasnport1.speed + " км/ч");
-        System.out.println(Trasnport2.name + " скорость:" + Trasnport2.speed + " км/ч");
+        System.out.println(Trasnport1.getName() + " скорость: " + Trasnport1.getSpeed() + " км/ч");
+        System.out.println(Trasnport2.getName() + " скорость: " + Trasnport2.getSpeed() + " км/ч");
 
-        System.out.println(Trasnport1.getPrice(City2));
-        System.out.println(Trasnport2.getPrice(City2));
+        System.out.println("Стоимость поездки в город: " + City1.getName() + " транспортом: " + Trasnport1.getName() + " составит: " + Trasnport1.getPrice(City1) + " рублей");
+        System.out.println("Стоимость поездки в город: " + City2.getName() + " транспортом: " + Trasnport1.getName() + " составит: " + Trasnport1.getPrice(City2) + " рублей");
+
+        System.out.println("Стоимость поездки в город: " + City1.getName() + " транспортом: " + Trasnport2.getName() + " составит: " + Trasnport2.getPrice(City1) + " рублей");
+        System.out.println("Стоимость поездки в город: " + City2.getName() + " транспортом: " + Trasnport2.getName() + " составит: " + Trasnport2.getPrice(City2) + " рублей");
+
     }
 }
