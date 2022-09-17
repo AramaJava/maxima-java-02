@@ -5,6 +5,6 @@ public class Plane extends Transport {
         super(name, capacity, speed, costOfKm);
     }
     public float getPrice(City city){
-        return city.HasAirport() ? city.getDistanceKm() * getCostOfKm(): 0;
+        return city.hasAirport() ? city.getDistanceKm() * getCostOfKm(): 0;
     }
 }

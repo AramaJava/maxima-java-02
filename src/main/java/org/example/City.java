@@ -23,7 +23,7 @@ public class City {
         return name;
     }
 
-    public boolean HasAirport() {
+    public boolean hasAirport() {
         return hasAirport;
     }
 
