@@ -8,8 +8,4 @@ public class Truck extends Transport {
         return city.getDistanceKm() * getCostOfKm();
     }
 
-    @Override
-    public float getShipping(int city, int weight, int hours) {
-        return 0;
-    }
 }

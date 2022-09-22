@@ -13,7 +13,7 @@ abstract class Transport {
         this.costOfKm = costOfKm;
     }
 
-    public String getName(){return name;};
+    public String getName() {return name;};
 
     public void setName(String name) {
         this.name = name;
@@ -44,5 +44,5 @@ abstract class Transport {
     }
 
     public abstract float getPrice(City city);
-    public abstract float getShipping(int city, int weight, int hours);
+
 }
