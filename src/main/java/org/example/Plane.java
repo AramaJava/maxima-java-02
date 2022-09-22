@@ -7,4 +7,7 @@ public class Plane extends Transport {
     public float getPrice(City city){
         return city.hasAirport() ? city.getDistanceKm() * getCostOfKm(): 0;
     }
+    public float getShipping(int city, int weight, int hours) {
+        return 0;
+    }
 }

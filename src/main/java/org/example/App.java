@@ -9,9 +9,8 @@ public class App
         City City1 = new City("Сургут",1000, true, false);
         City City3 = new City("Омск",1700);
 
-
-        System.out.println("Расстояние до " + City1.getName() + " " + City1.getDistanceKm() + " км"+ ", наличие Аэропорта: " + City1.HasAirport() + ", наличие речпорта: " + City1.isOnWater());
-        System.out.println("Расстояние до " + City3.getName() + " " + City3.getDistanceKm() + " км"+ ", наличие Аэропорта: " + City3.HasAirport() + ", наличие речпорта: " + City3.isOnWater());
+        System.out.println("Расстояние до " + City1.getName() + " " + City1.getDistanceKm() + " км"+ ", наличие Аэропорта: " + City1.hasAirport() + ", наличие речпорта: " + City1.isOnWater());
+        System.out.println("Расстояние до " + City3.getName() + " " + City3.getDistanceKm() + " км"+ ", наличие Аэропорта: " + City3.hasAirport() + ", наличие речпорта: " + City3.isOnWater());
 
 
         Truck Truck1 = new Truck("Scania R-серия 2011",2000,90,12.3f);
@@ -41,5 +40,6 @@ public class App
         System.out.println("Стоимость поездки в город: " + City3.getName() + " транспортом: " + Plane2.getName() + " составит: " + Plane2.getPrice(City3) + " рублей");
         System.out.println("Стоимость поездки в город: " + City3.getName() + " транспортом: " + Truck2.getName() + " составит: " + Truck2.getPrice(City3) + " рублей");
 
+        Logistics log1 = new Logistics(Truck1,Ship2, Plane1);
     }
 }
