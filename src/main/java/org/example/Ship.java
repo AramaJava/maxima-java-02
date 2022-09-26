@@ -9,6 +9,4 @@ public class Ship extends Transport {
         return city.isOnWater() ? city.getDistanceKm() * getCostOfKm(): 0;
     }
 
-
-
 }
