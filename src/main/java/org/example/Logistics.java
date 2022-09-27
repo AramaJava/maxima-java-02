@@ -11,13 +11,16 @@ public class Logistics {
     public Logistics(Transport... vehicles) {
         this.vehicles = vehicles;
     }
-   public Transport getShipping(City city, int weight, int hours) {
+
+
+    public Transport getShipping(City city, int weight, int hours) {
             Transport minCostTransport = null;
             for (Transport vehicle : vehicles) {
                 if (isShippingAvailable(city, vehicle, weight, hours)) {
                     if (minCostTransport == null) {
                         minCostTransport = vehicle;
-                    } else if (vehicle.getCostOfKm() < minCostTransport.getCostOfKm()) {
+                    }
+                    else if (vehicle.getCostOfKm() < minCostTransport.getCostOfKm()) {
                         minCostTransport = vehicle;
                     }
                 }
