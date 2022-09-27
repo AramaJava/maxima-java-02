@@ -22,7 +22,7 @@ public class App
         Plane Plane1 = new Plane("Boeing 737",18000, 900, 2f);
         Plane Plane2 = new Plane("Airbus A380", 17000,  950, 1f);
 
-        Plane1.setRepairing(true);
+        //Plane1.setRepairing(true);
 
         System.out.println(Ship1.getName() + " скорость: " + Ship1.getSpeed() + " км/ч" + Ship1.getCapacity());
         System.out.println(Ship2.getName() + " скорость: " + Ship2.getSpeed() + " км/ч" + Ship2.getCapacity());
