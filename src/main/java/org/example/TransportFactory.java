@@ -2,12 +2,12 @@ package org.example;
 
 public class TransportFactory {
 
-    public static final String SHIP_NAME = "Теплоход Светлый";
-    public static final float SHIP_PRICE = 2.32f;
-    public static final String TRUCK_NAME = "Фура";
-    public static final float TRUCK_PRICE = 4.22f;
-    public static final String PLANE_NAME = "Ил-86";
-    public static final float PLANE_PRICE = 5.32f;
+    final String SHIP_NAME = "Теплоход Светлый";
+    final float SHIP_PRICE = 2.32f;
+    final String TRUCK_NAME = "Фура";
+    final float TRUCK_PRICE = 4.22f;
+    final String PLANE_NAME = "Ил-86";
+    final float PLANE_PRICE = 5.32f;
 
     int roundUp(int x, int y) {
         if (x < y) return x;

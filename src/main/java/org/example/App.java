@@ -4,7 +4,7 @@ package org.example;
 public class App {
     public static void main(String[] args) {
 
-        City City1 = new City("Сургут", 22022, true, false);
+        City City1 = new City("Сургут", 500, true, false);
         City City3 = new City("Омск", 302);
 /*
 
@@ -47,7 +47,7 @@ public class App {
 
 
         TransportFactory factory = new TransportFactory();
-        Transport newTransport = factory.getTransport(City1, 2230, 2);
+        Transport newTransport = factory.getTransport(City1, 5000, 2);
 
         if (newTransport != null) {
             System.out.println(newTransport.getName() + " " + newTransport.getCapacity() + " " + newTransport.getSpeed());
