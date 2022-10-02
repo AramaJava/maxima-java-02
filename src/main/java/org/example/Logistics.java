@@ -36,8 +36,6 @@ public class Logistics {
                    && vehicles.getPrice(city) != 0f;
         }
 
-
-
     }
 
 

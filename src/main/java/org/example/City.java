@@ -14,7 +14,6 @@ public class City {
     public City(String name, int distanceKm) {
         this.name = name;
         this.distanceKm = distanceKm;
-        this.hasAirport = false;
         this.isOnWater = true;
     }
 
