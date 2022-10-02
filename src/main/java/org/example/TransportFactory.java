@@ -22,21 +22,13 @@ public class TransportFactory {
     }
 
     public Transport getTransport(City city, int weight, int hours) {
-        Transport toReturn;
-
         int getSpeed = city.getDistanceKm() / hours;
         int setSpeed = roundUp(getSpeed,10);
         int setCapacity = roundUp(weight, 500);
 
-        if (getSpeed < 40 && city.isOnWater()) {
-            toReturn = new Ship(SHIP_NAME, setCapacity, setSpeed, SHIP_PRICE);
-        } else if (getSpeed > 120 && city.hasAirport()) {
-            toReturn = new Plane(PLANE_NAME, setCapacity, setSpeed, PLANE_PRICE);
-        } else {
-            toReturn = new Truck(TRUCK_NAME, setCapacity, setSpeed, TRUCK_PRICE);
-        }
-
-        return toReturn;
+        if (getSpeed < 40 && city.isOnWater()) return new Ship(SHIP_NAME, setCapacity, setSpeed, SHIP_PRICE);
+        if (getSpeed > 120 && city.hasAirport()) return new Plane(PLANE_NAME, setCapacity, setSpeed, PLANE_PRICE);
+        return new Truck(TRUCK_NAME, setCapacity, setSpeed, TRUCK_PRICE);
     }
 }
 
