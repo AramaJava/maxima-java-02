@@ -4,8 +4,8 @@ package org.example;
 public class App {
     public static void main(String[] args) {
 
-        City City1 = new City("Сургут", 500, true, false);
-        City City3 = new City("Омск", 302);
+        City city1 = new City("Омск", 500, true, false);
+
 /*
 
         System.out.println("Расстояние до " + City1.getName() + " " + City1.getDistanceKm() + " км" + ", наличие Аэропорта: " + City1.hasAirport() + ", наличие речпорта: " + City1.isOnWater());
@@ -47,7 +47,7 @@ public class App {
 
 
         TransportFactory factory = new TransportFactory();
-        Transport newTransport = factory.getTransport(City1, 5000, 2);
+        Transport newTransport = factory.getTransport(city1, 5000, 2);
 
         if (newTransport != null) {
             System.out.println(newTransport.getName() + " " + newTransport.getCapacity() + " " + newTransport.getSpeed());
